@@ -1,0 +1,16 @@
+MetaTaken holding site
+======================
+
+Contents:
+- index.html
+- CNAME
+- assets/metataken-logo-dark.webp
+- assets/metataken-icon.png
+
+GitHub Pages:
+1. Copy these files to the repository root.
+2. Commit and push.
+3. In GitHub repository Settings > Pages, publish from your chosen branch/root.
+4. The CNAME file is already set to: metataken.com
+
+No JavaScript, analytics, external fonts, CDNs or third-party runtime dependencies are used.

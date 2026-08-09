@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#071522">
+
+  <title>MetaTaken — Privacy-focused image metadata cleaning for Windows</title>
+  <meta name="description" content="MetaTaken is a small, local Windows utility for inspecting, cleaning and verifying metadata in image files. No uploads. No accounts. No telemetry.">
+  <meta name="robots" content="index,follow">
+
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="MetaTaken">
+  <meta property="og:description" content="Inspect. Clean. Verify. Nothing leaves your PC.">
+  <meta property="og:image" content="assets/metataken-icon.png">
+
+  <link rel="icon" type="image/png" href="assets/metataken-icon.png">
+
+  <style>
+    :root {
+      color-scheme: dark;
+      --bg: #071522;
+      --bg-soft: #0b1e2e;
+      --panel: rgba(11, 30, 46, 0.78);
+      --panel-strong: rgba(14, 38, 58, 0.94);
+      --line: rgba(174, 236, 224, 0.14);
+      --text: #f4f7f2;
+      --muted: #aebbc2;
+      --accent: #99dfd1;
+      --accent-strong: #baf1df;
+      --navy: #0d3557;
+      --shadow: 0 24px 70px rgba(0, 0, 0, 0.34);
+    }
+
+    * { box-sizing: border-box; }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family:
+        Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont,
+        "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 18% 16%, rgba(39, 107, 126, 0.22), transparent 31rem),
+        radial-gradient(circle at 83% 8%, rgba(80, 160, 140, 0.12), transparent 28rem),
+        linear-gradient(145deg, #071522 0%, #081827 46%, #06121d 100%);
+    }
+
+    body::before {
+      content: "";
+      position: fixed;
+      inset: 0;
+      pointer-events: none;
+      background-image:
+        linear-gradient(rgba(255,255,255,.018) 1px, transparent 1px),
+        linear-gradient(90deg, rgba(255,255,255,.018) 1px, transparent 1px);
+      background-size: 40px 40px;
+      mask-image: linear-gradient(to bottom, black, transparent 75%);
+    }
+
+    a { color: inherit; }
+
+    .shell {
+      width: min(1120px, calc(100% - 32px));
+      margin: 0 auto;
+    }
+
+    header {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      padding: 26px 0;
+    }
+
+    .brand {
+      display: inline-flex;
+      align-items: center;
+      gap: 11px;
+      font-weight: 800;
+      letter-spacing: -0.02em;
+    }
+
+    .brand img {
+      width: 38px;
+      height: 38px;
+      object-fit: cover;
+      border-radius: 10px;
+      box-shadow: 0 8px 24px rgba(0,0,0,.22);
+    }
+
+    .status {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: var(--muted);
+      font-size: 0.88rem;
+      white-space: nowrap;
+    }
+
+    .status-dot {
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background: var(--accent);
+      box-shadow: 0 0 0 5px rgba(153, 223, 209, 0.09);
+    }
+
+    main {
+      padding: 54px 0 76px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: minmax(0, 1.06fr) minmax(320px, .94fr);
+      align-items: center;
+      gap: clamp(36px, 6vw, 78px);
+    }
+
+    .eyebrow {
+      margin: 0 0 14px;
+      color: var(--accent);
+      text-transform: uppercase;
+      letter-spacing: .16em;
+      font-size: .78rem;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 0;
+      max-width: 760px;
+      font-size: clamp(3rem, 8vw, 6.8rem);
+      line-height: .92;
+      letter-spacing: -0.065em;
+    }
+
+    .tagline {
+      margin: 24px 0 0;
+      max-width: 690px;
+      font-size: clamp(1.15rem, 2.3vw, 1.5rem);
+      line-height: 1.45;
+      color: #d9e4e4;
+      font-weight: 620;
+    }
+
+    .intro {
+      margin: 20px 0 0;
+      max-width: 670px;
+      color: var(--muted);
+      font-size: 1.02rem;
+      line-height: 1.72;
+    }
+
+    .pill-row {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 30px;
+    }
+
+    .pill {
+      display: inline-flex;
+      align-items: center;
+      min-height: 38px;
+      padding: 8px 13px;
+      border: 1px solid var(--line);
+      border-radius: 999px;
+      background: rgba(255,255,255,.025);
+      color: #cbd7d9;
+      font-size: .88rem;
+      font-weight: 650;
+    }
+
+    .visual {
+      position: relative;
+      padding: 18px;
+      border: 1px solid var(--line);
+      border-radius: 28px;
+      background:
+        linear-gradient(145deg, rgba(255,255,255,.04), rgba(255,255,255,.012)),
+        var(--panel);
+      box-shadow: var(--shadow);
+      overflow: hidden;
+      isolation: isolate;
+    }
+
+    .visual::before {
+      content: "";
+      position: absolute;
+      width: 220px;
+      height: 220px;
+      top: -100px;
+      right: -90px;
+      border-radius: 50%;
+      background: rgba(153, 223, 209, .16);
+      filter: blur(10px);
+      z-index: -1;
+    }
+
+    .visual img {
+      display: block;
+      width: 100%;
+      height: auto;
+      border-radius: 18px;
+    }
+
+    .coming {
+      margin-top: 66px;
+      padding: 26px 28px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      gap: 24px;
+      border: 1px solid var(--line);
+      border-radius: 20px;
+      background: var(--panel-strong);
+      box-shadow: 0 16px 44px rgba(0,0,0,.18);
+    }
+
+    .coming strong {
+      display: block;
+      margin-bottom: 4px;
+      font-size: 1.05rem;
+    }
+
+    .coming span {
+      color: var(--muted);
+      font-size: .94rem;
+      line-height: 1.55;
+    }
+
+    .badge {
+      flex: 0 0 auto;
+      padding: 10px 14px;
+      border-radius: 999px;
+      color: #061b1c;
+      background: var(--accent-strong);
+      font-size: .82rem;
+      font-weight: 850;
+      letter-spacing: .04em;
+      text-transform: uppercase;
+    }
+
+    footer {
+      padding: 26px 0 34px;
+      border-top: 1px solid var(--line);
+      color: #7f929c;
+      font-size: .84rem;
+    }
+
+    .footer-row {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      flex-wrap: wrap;
+    }
+
+    @media (max-width: 820px) {
+      header { padding-top: 20px; }
+      main { padding-top: 28px; }
+      .hero { grid-template-columns: 1fr; }
+      .visual { max-width: 650px; }
+      .coming {
+        align-items: flex-start;
+        flex-direction: column;
+      }
+    }
+
+    @media (max-width: 520px) {
+      .shell { width: min(100% - 22px, 1120px); }
+      .brand span { display: none; }
+      h1 { font-size: clamp(3rem, 18vw, 4.4rem); }
+      .visual { padding: 10px; border-radius: 20px; }
+      .visual img { border-radius: 13px; }
+      .coming { padding: 22px; }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      * { scroll-behavior: auto !important; }
+    }
+  </style>
+</head>
+
+<body>
+  <div class="shell">
+    <header>
+      <div class="brand" aria-label="MetaTaken">
+        <img src="assets/metataken-icon.png" alt="">
+        <span>MetaTaken</span>
+      </div>
+
+      <div class="status" aria-label="MetaTaken is in development">
+        <span class="status-dot" aria-hidden="true"></span>
+        In development
+      </div>
+    </header>
+
+    <main>
+      <section class="hero" aria-labelledby="hero-title">
+        <div>
+          <p class="eyebrow">Privacy-focused metadata cleaning for Windows</p>
+          <h1 id="hero-title">MetaTaken</h1>
+
+          <p class="tagline">
+            We have a particular set of tools. We find it. We remove it.
+          </p>
+
+          <p class="intro">
+            Inspect, clean and verify metadata from your images — locally on your PC.
+            MetaTaken is being built as a deliberately small utility with no cloud
+            processing, no accounts and no telemetry.
+          </p>
+
+          <div class="pill-row" aria-label="Planned MetaTaken capabilities">
+            <span class="pill">JPEG · PNG · WebP</span>
+            <span class="pill">EXIF · GPS · XMP · IPTC</span>
+            <span class="pill">Content Credentials inspection</span>
+            <span class="pill">Post-clean verification</span>
+            <span class="pill">Nothing leaves your PC</span>
+          </div>
+        </div>
+
+        <div class="visual" aria-label="MetaTaken logo">
+          <img
+            src="assets/metataken-logo-dark.webp"
+            alt="MetaTaken logo — image inspection graphic and MetaTaken wordmark"
+            width="1200"
+            height="800"
+          >
+        </div>
+      </section>
+
+      <section class="coming" aria-label="Launch status">
+        <div>
+          <strong>MetaTaken is coming soon.</strong>
+          <span>
+            The first release is focused on a simple workflow:
+            Drop image → Inspect → Clean → Verify.
+          </span>
+        </div>
+        <div class="badge">Foundation live</div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="footer-row">
+        <span>© 2026 Montana Global Enterprises. All rights reserved.</span>
+        <span>MetaTaken · metataken.com</span>
+      </div>
+    </footer>
+  </div>
+</body>
+</html>
