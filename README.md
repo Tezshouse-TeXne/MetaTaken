@@ -19,14 +19,15 @@ The landing page is aligned to the accepted MetaTaken v0.3.0-rc1 release-candida
 
 The checksum and detailed release evidence belong on GitHub rather than the ordinary landing page.
 
-## Publication items still intentionally unwired
+## Public release links
 
-The public GitHub repository/release URL has not yet been supplied to this website build, so the GitHub and Download controls remain placeholders. Before publication:
+The website is wired to the published MetaTaken v0.3.0-rc1 GitHub pre-release.
 
-1. replace the GitHub placeholder links with the approved public repository URL;
-2. replace the disabled download control with the approved GitHub prerelease/release URL;
-3. verify public copy against the current release authority and live hosting/support configuration;
-4. run a broken-link and accessibility check after final URLs are inserted.
+- Release page: `https://github.com/tezkouta-maker/MetaTaken/releases/tag/v0.3.0-rc1`
+- Direct Windows portable download: `https://github.com/tezkouta-maker/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip`
+- Public asset: `MetaTaken-v0.3.0-rc1-portable.zip`
+
+The GitHub release page remains the public authority for release notes and checksum information.
 
 Do not expose the internal release-admin pack, diagnostic JSON, runtime inventory or hardening evidence as ordinary website downloads.
 

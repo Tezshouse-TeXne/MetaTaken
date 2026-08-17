@@ -93,8 +93,6 @@ button, input, summary { font: inherit; }
   padding-inline: 17px;
 }
 .nav .nav-cta:hover { color: white; background: var(--navy-mid); }
-.is-pending { opacity: .78; }
-
 .hero {
   position: relative;
   overflow: hidden;
@@ -168,7 +166,6 @@ button, input, summary { font: inherit; }
 .button-primary:hover { background: var(--navy-mid); box-shadow: 0 14px 32px rgba(7, 52, 92, .23); }
 .button-secondary { border-color: var(--line); background: rgba(255,255,255,.78); color: var(--navy); }
 .button-secondary:hover { border-color: #b9ced0; background: var(--surface); }
-.button-disabled { cursor: default; opacity: .68; pointer-events: none; }
 .trust-row {
   margin-top: 27px;
   display: flex;
@@ -319,8 +316,6 @@ h2 { margin: 0; color: var(--navy-deep); font-size: clamp(36px, 4vw, 54px); line
 .download-actions small { color: #5e7382; font-size: 10.5px; }
 .download-card .button-primary,
 .download-card .button-primary:hover { background: #07345c; color: #ffffff; box-shadow: 0 10px 25px rgba(7, 52, 92, .18); }
-.download-card .button-disabled { opacity: 1; }
-
 .faq-section { background: var(--surface); }
 .faq-grid { display: grid; grid-template-columns: 260px 1fr; gap: 70px; align-items: start; }
 .faq-list { border-top: 1px solid var(--line); }
