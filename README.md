@@ -52,6 +52,7 @@ The three web assets in `/assets` are copied from the current RC1 candidate sour
 - no website licence navigation item;
 - technical, licensing and release detail belongs on GitHub;
 - public numeric regression counts are intentionally omitted from the landing page; detailed test evidence belongs on GitHub/release material unless a future public claim is backed by a substantially larger verified corpus;
+- primary navigation is limited to How it works, GitHub and Download; direct email support is intentionally kept out of the header;
 - footer navigation is limited to GitHub and Support;
 - no Windows logo; text-only Windows references plus trademark footnote;
 - system light/dark mode supported automatically;
