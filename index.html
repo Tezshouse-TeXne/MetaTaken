@@ -6,10 +6,71 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7faf9">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#071827">
-  <meta name="description" content="MetaTaken is a local Windows utility for inspecting, cleaning and verifying image metadata without intentionally altering image pixels.">
-  <meta name="robots" content="index,follow">
-  <title>MetaTaken™ — Inspect. Clean. Verify.</title>
+  <meta name="description" content="MetaTaken is a free local Windows utility to inspect, clean and verify EXIF, GPS, XMP, IPTC and supported image provenance metadata without cloud uploads.">
+  <meta name="robots" content="index,follow,max-image-preview:large">
+  <meta name="application-name" content="MetaTaken">
+  <title>MetaTaken — Image Metadata Cleaner &amp; Inspector for Windows</title>
+
+  <link rel="canonical" href="https://metataken.com/">
   <link rel="icon" type="image/png" href="assets/metataken-icon.png">
+  <link rel="apple-touch-icon" href="assets/metataken-icon.png">
+
+  <meta property="og:type" content="website">
+  <meta property="og:site_name" content="MetaTaken">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://metataken.com/">
+  <meta property="og:title" content="MetaTaken — Image Metadata Cleaner for Windows">
+  <meta property="og:description" content="Inspect, clean and verify image metadata locally on Windows. No cloud image processing, no account and no app telemetry.">
+  <meta property="og:image" content="https://metataken.com/assets/metataken-app-light.png">
+  <meta property="og:image:width" content="1140">
+  <meta property="og:image:height" content="810">
+  <meta property="og:image:alt" content="MetaTaken for Windows showing image inspection results and metadata cleaning controls.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="MetaTaken — Image Metadata Cleaner for Windows">
+  <meta name="twitter:description" content="Inspect, clean and verify image metadata locally on Windows. No cloud image processing, no account and no app telemetry.">
+  <meta name="twitter:image" content="https://metataken.com/assets/metataken-app-light.png">
+  <meta name="twitter:image:alt" content="MetaTaken for Windows showing image inspection results and metadata cleaning controls.">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "WebSite",
+        "@id": "https://metataken.com/#website",
+        "url": "https://metataken.com/",
+        "name": "MetaTaken",
+        "alternateName": "MetaTaken Image Metadata Cleaner"
+      },
+      {
+        "@type": "SoftwareApplication",
+        "@id": "https://metataken.com/#software",
+        "name": "MetaTaken",
+        "url": "https://metataken.com/",
+        "sameAs": "https://github.com/MGE-Apps/MetaTaken",
+        "downloadUrl": "https://github.com/MGE-Apps/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip",
+        "softwareVersion": "0.3.0-rc1",
+        "operatingSystem": "Windows x64",
+        "applicationCategory": "UtilitiesApplication",
+        "description": "A local Windows utility for inspecting, cleaning and verifying image metadata without intentionally altering image pixels.",
+        "image": "https://metataken.com/assets/metataken-icon.png",
+        "screenshot": "https://metataken.com/assets/metataken-app-light.png",
+        "isAccessibleForFree": true,
+        "offers": {
+          "@type": "Offer",
+          "price": 0,
+          "priceCurrency": "AUD"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Montana Global Enterprises"
+        }
+      }
+    ]
+  }
+  </script>
+
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -62,7 +123,7 @@
         <figure class="app-screenshot">
           <picture>
             <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-app-dark.png">
-            <img src="assets/metataken-app-light.png" alt="MetaTaken application showing image inspection results and Full Metadata Clean controls." width="1140" height="810">
+            <img src="assets/metataken-app-light.png" alt="MetaTaken application showing image inspection results and Full Metadata Clean controls." width="1140" height="810" fetchpriority="high" decoding="async">
           </picture>
           <figcaption>Actual MetaTaken v0.3.0-rc1 application interface.</figcaption>
         </figure>
@@ -237,7 +298,7 @@
     <section class="section privacy-section" id="privacy">
       <div class="shell privacy-grid">
         <div class="privacy-icon" aria-hidden="true">
-          <img src="assets/metataken-icon.png" alt="" width="256" height="256">
+          <img src="assets/metataken-icon.png" alt="" width="256" height="256" loading="lazy" decoding="async">
         </div>
         <div>
           <p class="eyebrow">Local by design</p>
@@ -328,7 +389,7 @@
       <div class="footer-brand">
         <picture>
           <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-wordmark-dark.png">
-          <img src="assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280">
+          <img src="assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280" loading="lazy" decoding="async">
         </picture>
         <p>We have a particular set of tools. We find it. We remove it.</p>
       </div>

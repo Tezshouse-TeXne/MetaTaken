@@ -1,6 +1,6 @@
 # MetaTaken Website
 
-Static public website for MetaTaken, currently comprising one focused product landing page.
+Static public website for MetaTaken, comprising one focused product landing page plus minimal search-discovery support files.
 
 ## Preview
 
@@ -18,6 +18,20 @@ The landing page is aligned to the accepted MetaTaken v0.3.0-rc1 release-candida
 - Independent-machine check: manual second-Windows-PC portable smoke test passed
 
 The checksum and detailed release evidence belong on GitHub rather than the ordinary landing page.
+
+## SEO and discovery
+
+The site includes a deliberately small technical SEO layer without adding content bloat or third-party services.
+
+- Canonical public URL: `https://metataken.com/`
+- descriptive search title and meta description;
+- Open Graph and Twitter/X social-preview metadata using the existing application screenshot;
+- `WebSite` and conservative `SoftwareApplication` JSON-LD structured data;
+- `robots.txt` allowing normal crawling and pointing to the sitemap;
+- `sitemap.xml` containing the single canonical landing-page URL;
+- square MetaTaken icon retained as the site favicon / touch icon.
+
+The structured data does not invent ratings, reviews or claims that are not present on the public site. Detailed release evidence remains on GitHub.
 
 ## Public release links
 
