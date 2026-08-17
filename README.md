@@ -23,8 +23,8 @@ The checksum and detailed release evidence belong on GitHub rather than the ordi
 
 The website is wired to the published MetaTaken v0.3.0-rc1 GitHub pre-release.
 
-- Release page: `https://github.com/tezkouta-maker/MetaTaken/releases/tag/v0.3.0-rc1`
-- Direct Windows portable download: `https://github.com/tezkouta-maker/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip`
+- Release page: `https://github.com/MGE-Apps/MetaTaken/releases/tag/v0.3.0-rc1`
+- Direct Windows portable download: `https://github.com/MGE-Apps/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip`
 - Public asset: `MetaTaken-v0.3.0-rc1-portable.zip`
 
 The GitHub release page remains the public authority for release notes and checksum information.
