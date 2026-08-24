@@ -15,18 +15,19 @@ MetaTaken™ is presented as a Tezshouse TeXne product. The public GitHub home i
 - Copyright presentation: `Copyright © 2026 Tezshouse TeXne. All rights reserved.`
 - Structured-data publisher: `Tezshouse TeXne`
 
-This update changes brand/repository authority only. It does **not** promote the public application release: the website remains on v0.3.0-rc1 until a later release is explicitly approved and published.
+The website now follows the published MetaTaken v0.3.0-rc2 release candidate and the Tezshouse TeXne repository/release authority.
 
 ## Current release authority
 
-The landing page is aligned to the accepted MetaTaken v0.3.0-rc1 release-candidate authority dated 17 August 2026.
+The landing page is aligned to the accepted MetaTaken v0.3.0-rc2 release-candidate authority published 24 August 2026.
 
-- Release state: accepted RC1; prerelease observation / maintenance mode
-- Canonical public asset name: `MetaTaken-v0.3.0-rc1-portable.zip`
-- Canonical SHA-256: `793fd9c6169eb2422f530fb5d36ab8619969e37784bb673065b2cc0546f7693f`
-- Packaged regression: 187 / 187 cases completed
-- Decoded-pixel verification: 243 cleaning writes checked; 0 changes detected
-- Independent-machine check: manual second-Windows-PC portable smoke test passed
+- Release state: accepted RC2 pre-release
+- Canonical public asset name: `MetaTaken-v0.3.0-rc2-portable.zip`
+- Canonical SHA-256: `fc601bff8e45df1bc07f76527f2861f8bd6a81e0a5317c5fff5b30baed977b22`
+- Retained regression testing: passed
+- Packaged Windows validation: passed
+- Parallel-processing comparison testing: passed
+- Reference corpus: full 187-image corpus passed
 
 The checksum and detailed release evidence belong on GitHub rather than the ordinary landing page.
 
@@ -46,11 +47,11 @@ The structured data does not invent ratings, reviews or claims that are not pres
 
 ## Public release links
 
-The website is wired to the published MetaTaken v0.3.0-rc1 GitHub pre-release.
+The website is wired to the published MetaTaken v0.3.0-rc2 GitHub pre-release.
 
-- Release page: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc1`
-- Direct Windows portable download: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip`
-- Public asset: `MetaTaken-v0.3.0-rc1-portable.zip`
+- Release page: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2`
+- Direct Windows portable download: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip`
+- Public asset: `MetaTaken-v0.3.0-rc2-portable.zip`
 
 The GitHub release page remains the public authority for release notes and checksum information.
 
@@ -64,11 +65,13 @@ The landing page may still state product-relevant privacy facts directly, includ
 
 ## Brand assets
 
-The three web assets in `/assets` are copied from the current RC1 candidate source asset set:
+The web assets in `/assets` are aligned to the current RC2 website presentation:
 
 - `metataken-wordmark-light.png`
 - `metataken-wordmark-dark.png`
 - `metataken-icon.png`
+- `metataken-app-light.png`
+- `metataken-app-dark.png`
 
 ## Design decisions currently locked into this landing page
 
