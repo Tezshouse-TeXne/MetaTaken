@@ -6,6 +6,17 @@ Static public website for MetaTaken, comprising one focused product landing page
 
 Open `index.html` directly in a browser. No build step, external fonts, analytics, cookies or third-party JavaScript are required.
 
+## Parent brand
+
+MetaTaken™ is presented as a Tezshouse TeXne product. The public GitHub home is now `https://github.com/Tezshouse-TeXne/MetaTaken`.
+
+- Parent brand: `Tezshouse TeXne`
+- Product mark in brand-facing text: `MetaTaken™`
+- Copyright presentation: `Copyright © 2026 Tezshouse TeXne. All rights reserved.`
+- Structured-data publisher: `Tezshouse TeXne`
+
+This update changes brand/repository authority only. It does **not** promote the public application release: the website remains on v0.3.0-rc1 until a later release is explicitly approved and published.
+
 ## Current release authority
 
 The landing page is aligned to the accepted MetaTaken v0.3.0-rc1 release-candidate authority dated 17 August 2026.
@@ -37,8 +48,8 @@ The structured data does not invent ratings, reviews or claims that are not pres
 
 The website is wired to the published MetaTaken v0.3.0-rc1 GitHub pre-release.
 
-- Release page: `https://github.com/MGE-Apps/MetaTaken/releases/tag/v0.3.0-rc1`
-- Direct Windows portable download: `https://github.com/MGE-Apps/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip`
+- Release page: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc1`
+- Direct Windows portable download: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc1/MetaTaken-v0.3.0-rc1-portable.zip`
 - Public asset: `MetaTaken-v0.3.0-rc1-portable.zip`
 
 The GitHub release page remains the public authority for release notes and checksum information.
@@ -63,6 +74,7 @@ The three web assets in `/assets` are copied from the current RC1 candidate sour
 
 - primary brand line: “We have a particular set of tools. We find it. We remove it.”
 - supporting hero headline: “See what's hiding in your images. Remove it. Verify the result.”
+- parent-brand attribution is intentionally concise: `MetaTaken™ by Tezshouse TeXne` in the footer, with Tezshouse TeXne also used as the structured-data publisher and copyright brand;
 - no ABN in ordinary website presentation;
 - no website licence navigation item;
 - technical, licensing and release detail belongs on GitHub;
