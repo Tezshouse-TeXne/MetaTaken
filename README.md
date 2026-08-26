@@ -1,92 +1,153 @@
-# MetaTaken Website
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-wordmark-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/metataken-wordmark-light.png">
+    <img alt="MetaTaken" src="assets/metataken-wordmark-light.png" width="520">
+  </picture>
+</p>
 
-Static public website for MetaTaken, comprising one focused product landing page plus minimal search-discovery support files.
+<p align="center"><strong>We have a particular set of tools. We find it. We remove it.</strong></p>
+<p align="center"><strong>Inspect. Clean. Verify.</strong></p>
 
-## Preview
+<p align="center">
+  A private, local Windows utility for inspecting, removing and verifying metadata in image files.<br>
+  <strong>No uploads. No account. No application telemetry.</strong>
+</p>
 
-Open `index.html` directly in a browser. No build step, external fonts, analytics, cookies or third-party JavaScript are required.
+<p align="center">
+  <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2"><strong>View MetaTaken v0.3.0-rc2</strong></a>
+  ·
+  <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip"><strong>Download Windows portable ZIP</strong></a>
+  ·
+  <a href="https://metataken.com/"><strong>metataken.com</strong></a>
+</p>
 
-## Parent brand
+---
 
-MetaTaken™ is presented as a Tezshouse TeXne product. The public GitHub home is now `https://github.com/Tezshouse-TeXne/MetaTaken`.
+## See what's hiding in your images. Remove it. Verify the result.
 
-- Parent brand: `Tezshouse TeXne`
-- Product mark in brand-facing text: `MetaTaken™`
-- Copyright presentation: `Copyright © 2026 Tezshouse TeXne. All rights reserved.`
-- Structured-data publisher: `Tezshouse TeXne`
+Images can carry much more than visible pixels. MetaTaken uses ExifTool and additional format-aware checks to surface metadata in understandable categories, clean what can be safely removed, and automatically inspect the result again.
 
-The website now follows the published MetaTaken v0.3.0-rc2 release candidate and the Tezshouse TeXne repository/release authority.
+The default workflow is simple:
 
-## Current release authority
+**Drop image → Inspect → Clean → Verify**
 
-The landing page is aligned to the accepted MetaTaken v0.3.0-rc2 release-candidate authority published 24 August 2026.
+<p align="center">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-app-dark.png">
+    <source media="(prefers-color-scheme: light)" srcset="assets/metataken-app-light.png">
+    <img alt="MetaTaken application" src="assets/metataken-app-light.png" width="900">
+  </picture>
+</p>
 
-- Release state: accepted RC2 pre-release
-- Canonical public asset name: `MetaTaken-v0.3.0-rc2-portable.zip`
-- Canonical SHA-256: `fc601bff8e45df1bc07f76527f2861f8bd6a81e0a5317c5fff5b30baed977b22`
-- Retained regression testing: passed
-- Packaged Windows validation: passed
-- Parallel-processing comparison testing: passed
-- Reference corpus: full 187-image corpus passed
+## What MetaTaken looks for
 
-The checksum and detailed release evidence belong on GitHub rather than the ordinary landing page.
+MetaTaken can inspect and, where safely supported, remove metadata such as:
 
-## SEO and discovery
+- EXIF and camera/device information
+- GPS and location data
+- XMP and IPTC metadata
+- author, account and software/generator information
+- comments and descriptions
+- timestamps
+- embedded thumbnails and previews
+- C2PA / Content Credentials / JUMBF provenance data
+- other removable metadata identified by ExifTool and MetaTaken's format-aware checks
 
-The site includes a deliberately small technical SEO layer without adding content bloat or third-party services.
+Raw technical metadata is also available through the Advanced view.
 
-- Canonical public URL: `https://metataken.com/`
-- descriptive search title and meta description;
-- Open Graph and Twitter/X social-preview metadata using the existing application screenshot;
-- `WebSite` and conservative `SoftwareApplication` JSON-LD structured data;
-- `robots.txt` allowing normal crawling and pointing to the sitemap;
-- `sitemap.xml` containing the single canonical landing-page URL;
-- square MetaTaken icon retained as the site favicon / touch icon.
+## Cleaning modes
 
-The structured data does not invent ratings, reviews or claims that are not present on the public site. Detailed release evidence remains on GitHub.
+### Privacy Clean
 
-## Public release links
+Targets personal and private metadata such as location, author/device information and timestamps while preserving data required for safe image handling where appropriate.
 
-The website is wired to the published MetaTaken v0.3.0-rc2 GitHub pre-release.
+### Full Metadata Clean
 
-- Release page: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2`
-- Direct Windows portable download: `https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip`
-- Public asset: `MetaTaken-v0.3.0-rc2-portable.zip`
+Removes all safely removable metadata MetaTaken can identify, including supported AI provenance metadata such as C2PA / Content Credentials.
 
-The GitHub release page remains the public authority for release notes and checksum information.
+MetaTaken creates a cleaned copy by default rather than silently overwriting the original.
 
-Do not expose the internal release-admin pack, diagnostic JSON, runtime inventory or hardening evidence as ordinary website downloads.
+## Verification is part of the operation
 
-## Public-site scope
+MetaTaken does not treat a successful cleaning command as proof that the job is finished.
 
-The website stays deliberately small: brand, explain, reassure and download. Detailed privacy, licensing, third-party, source, release and engineering material belongs on GitHub rather than a standalone website legal/documentation section.
+After cleaning, the output is inspected again and MetaTaken reports what was:
 
-The landing page may still state product-relevant privacy facts directly, including local image processing, no account requirement and no application telemetry.
+- detected
+- removed
+- retained
+- unsupported
+- uncertain
+- not tested
 
-## Brand assets
+Where practical, MetaTaken also compares decoded image content before and after cleaning. It reports **Pixel content unchanged** only when that check actually passes.
 
-The web assets in `/assets` are aligned to the current RC2 website presentation:
+## Supported image formats
 
-- `metataken-wordmark-light.png`
-- `metataken-wordmark-dark.png`
-- `metataken-icon.png`
-- `metataken-app-light.png`
-- `metataken-app-dark.png`
+Current inspection and cleaning support:
 
-## Design decisions currently locked into this landing page
+- JPEG / JPG
+- PNG
+- WebP
+- GIF
+- HEIC / HEIF / HIF*
 
-- primary brand line: “We have a particular set of tools. We find it. We remove it.”
-- supporting hero headline: “See what's hiding in your images. Remove it. Verify the result.”
-- parent-brand attribution is intentionally concise: `MetaTaken™ by Tezshouse TeXne` in the footer, with Tezshouse TeXne also used as the structured-data publisher and copyright brand;
-- no ABN in ordinary website presentation;
-- no website licence navigation item;
-- technical, licensing and release detail belongs on GitHub;
-- public numeric regression counts are intentionally omitted from the landing page; detailed test evidence belongs on GitHub/release material unless a future public claim is backed by a substantially larger verified corpus;
-- primary navigation is limited to How it works, GitHub and Download; direct email support is intentionally kept out of the header;
-- footer navigation is limited to GitHub and Support;
-- no Windows logo; text-only Windows references plus trademark footnote;
-- system light/dark mode supported automatically;
-- actual light/dark application screenshots in the hero, switched automatically with system theme;
-- original images are never cleaned in place or overwritten; cleaning uses separate output copies;
-- product-relevant privacy facts stay on the landing page; detailed privacy/legal/licensing material belongs on GitHub.
-- image-support messaging is future-facing without naming or promising unapproved formats: more formats are added only when they can be supported reliably.
+\* HEIC/HEIF/HIF pixel verification depends on compatible Windows HEIF/HEVC codec support.
+
+Additional formats may be added only where they can be supported and verified reliably.
+
+## Privacy by design
+
+MetaTaken is deliberately local-first:
+
+- image processing stays on your computer
+- no account is required
+- no cloud upload is required
+- no application telemetry
+- ExifTool is bundled locally
+
+## SynthID
+
+SynthID is pixel-level watermarking rather than conventional metadata.
+
+MetaTaken does **not** attempt to remove SynthID. Unless a sufficiently reliable detector is available and actually used, MetaTaken reports:
+
+**SynthID: Not tested / detection unavailable**
+
+That status is not evidence that SynthID is absent.
+
+## Current release — v0.3.0-rc2
+
+MetaTaken v0.3.0-rc2 is an accepted release candidate for v0.3.0.
+
+RC2 has passed retained regression testing, packaged Windows validation, parallel-processing comparison testing and the full 187-image reference corpus.
+
+The portable build requires no installer: extract the ZIP and run `MetaTaken.exe`.
+
+**Release page:**  
+https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2
+
+**Direct download:**  
+https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip
+
+The release page is the public authority for current release notes, checksum information and known limitations.
+
+## About this repository
+
+This repository is MetaTaken's public GitHub home. It currently hosts the public website source and official release downloads.
+
+The website is intentionally lightweight: static HTML/CSS, no analytics, no cookies, no external fonts and no third-party JavaScript. Open `index.html` directly to preview it locally.
+
+## Built on trusted tooling
+
+ExifTool is MetaTaken's primary metadata engine. Third-party components and required attribution are documented with the distributed application and project material.
+
+## MetaTaken by Tezshouse TeXne
+
+MetaTaken™ is developed and published by **Tezshouse TeXne**.
+
+**Website:** https://metataken.com/  
+**GitHub:** https://github.com/Tezshouse-TeXne/MetaTaken
+
+Copyright © 2026 Tezshouse TeXne. All rights reserved.
