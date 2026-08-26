@@ -182,7 +182,6 @@ button, input, summary { font: inherit; }
   font-weight: 700;
 }
 
-
 .app-screenshot {
   position: relative;
   margin: 0;
@@ -288,8 +287,8 @@ h2 { margin: 0; color: var(--navy-deep); font-size: clamp(36px, 4vw, 54px); line
 
 .privacy-section { background: linear-gradient(180deg, var(--surface-soft), #e7f2f0); }
 .privacy-grid { display: grid; grid-template-columns: 260px 1fr; gap: 64px; align-items: center; }
-.privacy-icon { width: 230px; height: 230px; display: grid; place-items: center; border-radius: 42px; background: rgba(255,255,255,.65); border: 1px solid rgba(255,255,255,.8); box-shadow: var(--shadow-soft); }
-.privacy-icon img { width: 190px; }
+.privacy-icon { width: 230px; height: 230px; display: grid; place-items: center; overflow: hidden; border-radius: 42px; background: rgba(255,255,255,.65); border: 1px solid rgba(255,255,255,.8); box-shadow: var(--shadow-soft); }
+.privacy-icon img { width: 190px; height: auto; object-fit: contain; }
 .privacy-grid h2 { margin-bottom: 17px; }
 .privacy-grid .lead { max-width: 750px; }
 .privacy-points { display: flex; flex-wrap: wrap; gap: 9px; margin: 27px 0 18px; }
@@ -437,9 +436,10 @@ details p { margin: -3px 42px 20px 0; color: var(--muted); font-size: 14px; }
   .step-card h3 { margin-top: 34px; }
   .verification-card, .watermark-card, .download-card { padding: 28px; border-radius: 22px; }
   .format-chips { grid-template-columns: 1fr; }
-  .privacy-grid { grid-template-columns: 1fr; }
-  .privacy-icon { width: 150px; height: 150px; }
-  .privacy-icon img { width: 125px; }
+  .privacy-grid { grid-template-columns: 1fr; gap: 28px; }
+  .privacy-icon { width: 132px; height: 132px; margin-inline: auto; border-radius: 28px; }
+  .privacy-icon img { width: 108px; height: 108px; object-fit: contain; position: static; transform: none; margin: 0; }
+  .privacy-grid > div:last-child { min-width: 0; }
   .footer-main { flex-direction: column; }
   .footer-legal { flex-direction: column; gap: 6px; }
 }
