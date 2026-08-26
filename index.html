@@ -6,7 +6,7 @@
   <meta name="color-scheme" content="light dark">
   <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7faf9">
   <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#071827">
-  <meta name="description" content="MetaTaken is a free local Windows utility to inspect, clean and verify EXIF, GPS, XMP, IPTC and supported image provenance metadata without cloud uploads.">
+  <meta name="description" content="MetaTaken is a free local Windows utility that shows you what information is attached to an image, removes supported metadata from a separate cleaned copy, and verifies the result.">
   <meta name="robots" content="index,follow,max-image-preview:large">
   <meta name="application-name" content="MetaTaken">
   <meta name="author" content="Tezshouse TeXne">
@@ -21,7 +21,7 @@
   <meta property="og:locale" content="en_AU">
   <meta property="og:url" content="https://metataken.com/">
   <meta property="og:title" content="MetaTaken™ — Image Metadata Cleaner for Windows">
-  <meta property="og:description" content="Inspect, clean and verify image metadata locally on Windows. No cloud image processing, no account and no app telemetry.">
+  <meta property="og:description" content="Before you share an image, see what else you might be sharing. Inspect, clean and verify metadata locally on Windows while keeping your original untouched.">
   <meta property="og:image" content="https://metataken.com/assets/metataken-app-light.png">
   <meta property="og:image:width" content="1140">
   <meta property="og:image:height" content="810">
@@ -29,7 +29,7 @@
 
   <meta name="twitter:card" content="summary_large_image">
   <meta name="twitter:title" content="MetaTaken™ — Image Metadata Cleaner for Windows">
-  <meta name="twitter:description" content="Inspect, clean and verify image metadata locally on Windows. No cloud image processing, no account and no app telemetry.">
+  <meta name="twitter:description" content="Before you share an image, see what else you might be sharing. MetaTaken explains hidden metadata, creates a separate cleaned copy and verifies the result.">
   <meta name="twitter:image" content="https://metataken.com/assets/metataken-app-light.png">
   <meta name="twitter:image:alt" content="MetaTaken for Windows showing image inspection results and metadata cleaning controls.">
 
@@ -46,6 +46,7 @@
         "publisher": {
           "@type": "Organization",
           "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/",
           "sameAs": "https://github.com/Tezshouse-TeXne"
         }
       },
@@ -59,7 +60,7 @@
         "softwareVersion": "0.3.0-rc2",
         "operatingSystem": "Windows x64",
         "applicationCategory": "UtilitiesApplication",
-        "description": "A local Windows utility for inspecting, cleaning and verifying image metadata without intentionally altering image pixels.",
+        "description": "A local Windows utility that inspects image metadata, removes supported metadata from a separate cleaned copy and verifies the result without intentionally altering image pixels.",
         "image": "https://metataken.com/assets/metataken-icon.png",
         "screenshot": "https://metataken.com/assets/metataken-app-light.png",
         "isAccessibleForFree": true,
@@ -71,6 +72,7 @@
         "publisher": {
           "@type": "Organization",
           "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/",
           "sameAs": "https://github.com/Tezshouse-TeXne"
         }
       }
@@ -92,6 +94,7 @@
         </picture>
       </a>
       <nav class="nav" aria-label="Main navigation">
+        <a href="#why">Why MetaTaken?</a>
         <a href="#how-it-works">How it works</a>
         <a class="github-link" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
         <a class="nav-cta" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download</a>
@@ -111,19 +114,19 @@
             <p class="tagline">We have a particular set of tools. We find it. We remove it.</p>
           </div>
 
-          <h1>See what's hiding in your images.<br><span>Remove it. Verify the result.</span></h1>
-          <p class="hero-intro">A small local Windows utility for inspecting, cleaning and verifying image metadata — without intentionally altering image pixels.</p>
+          <h1>Your photo can say more than you think.<br><span>See it. Remove it. Verify it.</span></h1>
+          <p class="hero-intro">Images can carry information you never see — where they were taken, when, what device was used, who created or edited them, and even which software or AI tools were involved. MetaTaken explains what is attached, lets you remove what you do not want, and creates a separate cleaned copy. <strong>Your original stays untouched.</strong></p>
 
           <div class="hero-actions">
             <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download for Windows</a>
-            <a class="button button-secondary" href="#how-it-works">See how it works <span aria-hidden="true">→</span></a>
+            <a class="button button-secondary" href="#why">Why use MetaTaken? <span aria-hidden="true">→</span></a>
           </div>
 
           <div class="trust-row" aria-label="MetaTaken privacy and workflow highlights">
             <span>Local processing</span>
             <span>No account</span>
             <span>No app telemetry</span>
-            <span>Originals preserved</span>
+            <span>Original never overwritten</span>
           </div>
         </div>
 
@@ -140,9 +143,58 @@
     <section class="quick-proof" aria-label="Core product principles">
       <div class="shell proof-grid">
         <div><strong>Drop</strong><span>Add images, folders or batches.</span></div>
-        <div><strong>Inspect</strong><span>See metadata in plain language.</span></div>
-        <div><strong>Clean</strong><span>Choose the level of cleanup.</span></div>
+        <div><strong>Inspect</strong><span>See what is attached in plain language.</span></div>
+        <div><strong>Clean</strong><span>Create a separate cleaned copy.</span></div>
         <div><strong>Verify</strong><span>Automatically check the result.</span></div>
+      </div>
+    </section>
+
+    <section class="section metadata-section" id="why">
+      <div class="shell">
+        <div class="section-heading centered">
+          <p class="eyebrow">Why would I use MetaTaken?</p>
+          <h2>Before you share the image, know what else you might be sharing.</h2>
+          <p>You do not need to know what EXIF, XMP or C2PA means. These are the everyday situations where hidden image information can matter.</p>
+        </div>
+
+        <div class="steps">
+          <article class="step-card" style="padding:0; overflow:hidden; min-height:0;">
+            <img src="data:image/webp;base64,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" alt="Illustration of an online-sale product photo with a location marker." width="165" height="95" loading="lazy" decoding="async" style="width:100%; height:auto; aspect-ratio:165/95; object-fit:cover; border-bottom:1px solid var(--line);">
+            <div style="padding:22px;">
+              <h3 style="margin:0 0 8px; font-size:22px;">Selling something online</h3>
+              <p>Photos taken at home can carry location, date and device details. Check what is attached before the listing goes public.</p>
+            </div>
+          </article>
+          <article class="step-card" style="padding:0; overflow:hidden; min-height:0;">
+            <img src="data:image/webp;base64,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" alt="Illustration of a photo being posted to social media." width="161" height="95" loading="lazy" decoding="async" style="width:100%; height:auto; aspect-ratio:161/95; object-fit:cover; border-bottom:1px solid var(--line);">
+            <div style="padding:22px;">
+              <h3 style="margin:0 0 8px; font-size:22px;">Posting on social media</h3>
+              <p>See what the file is carrying before it goes public — location, dates, device details, creator information and editing history.</p>
+            </div>
+          </article>
+          <article class="step-card" style="padding:0; overflow:hidden; min-height:0;">
+            <img src="data:image/webp;base64,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" alt="Illustration representing personal and family photo sharing." width="157" height="95" loading="lazy" decoding="async" style="width:100%; height:auto; aspect-ratio:157/95; object-fit:cover; border-bottom:1px solid var(--line);">
+            <div style="padding:22px;">
+              <h3 style="margin:0 0 8px; font-size:22px;">Sharing personal photos</h3>
+              <p>Share the picture without unnecessarily sharing where it was taken, what device you used, account details or editing history.</p>
+            </div>
+          </article>
+          <article class="step-card" style="padding:0; overflow:hidden; min-height:0;">
+            <img src="data:image/webp;base64,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" alt="Illustration of an AI-created image on a computer." width="159" height="95" loading="lazy" decoding="async" style="width:100%; height:auto; aspect-ratio:159/95; object-fit:cover; border-bottom:1px solid var(--line);">
+            <div style="padding:22px;">
+              <h3 style="margin:0 0 8px; font-size:22px;">AI-created or AI-edited images</h3>
+              <p>Find and remove supported Content Credentials, C2PA provenance and generator metadata that can trigger metadata-based “AI content” labels.</p>
+            </div>
+          </article>
+        </div>
+
+        <div class="verification-card" style="margin-top:24px; padding:28px 32px;">
+          <div class="verification-copy">
+            <p class="eyebrow">AI / Content Credentials</p>
+            <h2 style="font-size:clamp(28px, 3vw, 40px);">Remove embedded AI credentials before you share.</h2>
+            <p>When a platform relies on embedded Content Credentials or generator metadata, removing those supported structures can prevent that metadata-based AI label from following the cleaned file. Platforms may also use independent detection methods, so no utility can guarantee how every service will classify every upload.</p>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -163,17 +215,17 @@
           <article class="step-card">
             <span class="step-number">02</span>
             <h3>Inspect</h3>
-            <p>See findings grouped into understandable categories, with detailed analysis available when you want it.</p>
+            <p>See findings grouped into understandable categories, with technical detail available when you want it.</p>
           </article>
           <article class="step-card">
             <span class="step-number">03</span>
-            <h3>Clean</h3>
-            <p>Use Privacy Clean or Full Metadata Clean. MetaTaken creates a separate cleaned copy.</p>
+            <h3>Clean a copy</h3>
+            <p>Choose Privacy Clean or Full Metadata Clean. MetaTaken creates a new cleaned copy and leaves the original untouched.</p>
           </article>
           <article class="step-card">
             <span class="step-number">04</span>
             <h3>Verify</h3>
-            <p>The cleaned output is inspected again, with decoded-pixel comparison where supported.</p>
+            <p>The cleaned copy is inspected again, with decoded-pixel comparison where supported.</p>
           </article>
         </div>
       </div>
@@ -183,41 +235,59 @@
       <div class="shell">
         <div class="section-heading">
           <p class="eyebrow">Choose how far to go</p>
-          <h2>Inspect it. Clean the private stuff. Or go further.</h2>
-          <p>MetaTaken gives you three clear modes without burying the job under technical switches.</p>
+          <h2>Look first. Remove private information. Or clean everything we safely can.</h2>
+          <p>The main choices stay simple. MetaTaken handles the technical detail underneath and explains the result afterwards.</p>
         </div>
 
         <div class="mode-cards">
           <article class="mode-card">
             <span class="mode-kicker">LOOK</span>
             <h3>Inspect Only</h3>
-            <p>See what MetaTaken can identify without modifying the image.</p>
+            <p>See what MetaTaken can identify without changing the file.</p>
             <ul>
-              <li>Plain-language categories</li>
-              <li>Detailed analysis available</li>
+              <li>Location, dates, device and creator information</li>
+              <li>Editing software and AI / provenance findings</li>
               <li>No file modification</li>
             </ul>
           </article>
           <article class="mode-card featured">
             <span class="mode-kicker">PRIVATE</span>
             <h3>Privacy Clean</h3>
-            <p>Target personal and private metadata while preserving the image workflow.</p>
+            <p>Remove personal and private metadata from a separate cleaned copy.</p>
             <ul>
-              <li>Location and GPS</li>
-              <li>Author, device and timestamps</li>
-              <li>Separate cleaned copy</li>
+              <li>Location and GPS information</li>
+              <li>Author, account and device details</li>
+              <li>Dates and timestamps, including capture date where stored</li>
             </ul>
           </article>
           <article class="mode-card">
             <span class="mode-kicker">FULL</span>
             <h3>Full Metadata Clean</h3>
-            <p>Remove safely removable metadata more broadly, including supported provenance information.</p>
+            <p>Go further and remove all safely removable metadata MetaTaken supports.</p>
             <ul>
-              <li>EXIF, XMP and IPTC</li>
-              <li>Supported C2PA / JUMBF data</li>
-              <li>Automatic post-clean verification</li>
+              <li>EXIF, XMP, IPTC and embedded metadata</li>
+              <li>Supported C2PA / Content Credentials / JUMBF provenance</li>
+              <li>Generator, software and creator information</li>
             </ul>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section verification-section">
+      <div class="shell">
+        <div class="verification-card verification-card-wide">
+          <div class="verification-copy">
+            <p class="eyebrow">Your original stays yours</p>
+            <h2>Your original is never cleaned in place or overwritten.</h2>
+            <p>MetaTaken creates a separate output copy, removes the selected metadata from that copy, then automatically re-inspects it. Where supported, decoded image pixels are compared before and after so MetaTaken can report whether pixel content remained unchanged.</p>
+          </div>
+          <div class="verify-points" aria-label="Cleaning and verification guarantees">
+            <span><b>✓</b> Original file preserved</span>
+            <span><b>✓</b> Separate cleaned copy created</span>
+            <span><b>✓</b> Output re-inspected</span>
+            <span><b>✓</b> Pixel content checked where supported</span>
+          </div>
         </div>
       </div>
     </section>
@@ -239,42 +309,23 @@
       </div>
     </section>
 
-    <section class="section verification-section">
-      <div class="shell">
-        <div class="verification-card verification-card-wide">
-          <div class="verification-copy">
-            <p class="eyebrow">Verification is part of the job</p>
-            <h2>Cleaning isn't finished until it's checked.</h2>
-            <p>After cleaning, MetaTaken automatically re-inspects the output, reports what was removed or retained, and compares decoded image pixels where supported.</p>
-          </div>
-          <div class="verify-points" aria-label="Verification checks">
-            <span><b>✓</b> Original preserved</span>
-            <span><b>✓</b> Output re-inspected</span>
-            <span><b>✓</b> Pixel content checked where supported</span>
-          </div>
-        </div>
-      </div>
-    </section>
-
     <section class="section metadata-section">
       <div class="shell">
         <div class="section-heading centered narrow">
           <p class="eyebrow">What MetaTaken looks for</p>
-          <h2>More than a couple of EXIF fields.</h2>
-          <p>Findings are grouped into useful categories instead of forcing you to decipher a raw metadata dump.</p>
+          <h2>You don't need to know what EXIF means.</h2>
+          <p>MetaTaken translates technical metadata into things people actually recognise. Raw detail is there when you want it, not forced on you first.</p>
         </div>
         <div class="chip-grid" aria-label="Metadata categories">
-          <span>Location & GPS</span>
-          <span>Camera & device</span>
-          <span>Dates & timestamps</span>
-          <span>Author & account</span>
+          <span>Where it was taken · GPS</span>
+          <span>When it was taken · timestamps</span>
+          <span>What device took it</span>
+          <span>Who created or edited it</span>
           <span>Descriptions & comments</span>
-          <span>Software & generator</span>
-          <span>EXIF</span>
-          <span>XMP</span>
-          <span>IPTC</span>
-          <span>Thumbnails & previews</span>
-          <span>C2PA / Content Credentials</span>
+          <span>Software & generator information</span>
+          <span>Embedded thumbnails & previews</span>
+          <span>AI / Content Credentials</span>
+          <span>EXIF · XMP · IPTC</span>
           <span>JUMBF & other removable metadata</span>
         </div>
       </div>
@@ -340,7 +391,7 @@
       <div class="shell download-card">
         <div>
           <p class="eyebrow">Freeware for Windows</p>
-          <h2>Ready to take a look?</h2>
+          <h2>Ready to see what your images are carrying?</h2>
           <p>MetaTaken v0.3.0-rc2 is the current accepted release candidate and is available now as a portable Windows x64 download.</p>
         </div>
         <div class="download-actions">
@@ -367,8 +418,16 @@
             <p>No. MetaTaken never cleans an image in place or overwrites your original. Cleaning creates a separate output copy, and an existing cleaned output is not silently overwritten.</p>
           </details>
           <details>
-            <summary>Does MetaTaken remove AI metadata?</summary>
-            <p>Full Metadata Clean targets safely removable metadata broadly, including supported C2PA / Content Credentials / JUMBF provenance structures. The result is then inspected again.</p>
+            <summary>Will cleaning remove the date my photo was taken?</summary>
+            <p>It can. Privacy Clean targets timestamps, and Full Metadata Clean removes supported metadata more broadly. That can include the photo's capture date where it is stored as removable metadata. Your original is never overwritten, so the original file keeps its original metadata.</p>
+          </details>
+          <details>
+            <summary>Does MetaTaken change the picture itself?</summary>
+            <p>MetaTaken changes metadata structures in the cleaned copy, but it does not intentionally alter image pixels. After cleaning, decoded pixel content is compared where supported and the result is reported rather than assumed.</p>
+          </details>
+          <details>
+            <summary>Can MetaTaken remove AI Content Credentials and help avoid an “AI content” label?</summary>
+            <p>Yes, Full Metadata Clean targets supported C2PA / Content Credentials / JUMBF provenance and generator metadata. When a platform applies a label from those embedded credentials, removing them can prevent that metadata-based label from following the cleaned file. Platforms may also use independent detection methods, so MetaTaken cannot guarantee how every service will classify every upload.</p>
           </details>
           <details>
             <summary>Does MetaTaken remove SynthID?</summary>
@@ -399,15 +458,16 @@
           <img src="assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280" loading="lazy" decoding="async">
         </picture>
         <p>We have a particular set of tools. We find it. We remove it.</p>
-        <p class="footer-parent-brand">MetaTaken™ by Tezshouse TeXne.</p>
+        <p class="footer-parent-brand">MetaTaken™ by <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>.</p>
       </div>
       <div class="footer-links">
         <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
         <a href="mailto:support@metataken.com">Support</a>
+        <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>
       </div>
     </div>
     <div class="shell footer-legal">
-      <p>Copyright © 2026 Tezshouse TeXne. All rights reserved.</p>
+      <p>Copyright © 2026 <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>. All rights reserved.</p>
       <p>Windows is a trademark of the Microsoft group of companies.</p>
     </div>
     <span id="github" class="anchor-target" aria-hidden="true"></span>
