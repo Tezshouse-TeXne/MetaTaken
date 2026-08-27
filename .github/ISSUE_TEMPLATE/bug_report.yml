@@ -1,0 +1,105 @@
+name: Bug report
+description: Report a reproducible problem with MetaTaken
+title: "[Bug]: "
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for helping improve MetaTaken.
+
+        **Security vulnerability?** Please do not report it publicly. Use the [Security Policy](https://github.com/Tezshouse-TeXne/MetaTaken/security/policy) instead.
+
+        MetaTaken is a privacy-focused utility. Please remove personal or sensitive information from diagnostics, screenshots and sample files before posting.
+
+  - type: input
+    id: version
+    attributes:
+      label: MetaTaken version
+      description: Which MetaTaken build are you using?
+      placeholder: e.g. v0.3.0-rc2
+    validations:
+      required: true
+
+  - type: input
+    id: windows
+    attributes:
+      label: Windows version
+      description: Include the Windows version/build if known.
+      placeholder: e.g. Windows 11 24H2
+    validations:
+      required: true
+
+  - type: dropdown
+    id: format
+    attributes:
+      label: Image format
+      description: Which image format was involved?
+      options:
+        - JPEG / JPG
+        - PNG / APNG
+        - WebP / Animated WebP
+        - GIF
+        - HEIC / HEIF / HIF
+        - Multiple formats
+        - Other / not applicable
+    validations:
+      required: true
+
+  - type: textarea
+    id: summary
+    attributes:
+      label: What happened?
+      description: Describe the problem as clearly as you can.
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: Tell us the smallest reliable sequence that reproduces the problem.
+      placeholder: |
+        1. Open MetaTaken
+        2. Add ...
+        3. Choose ...
+        4. Observe ...
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What did MetaTaken report or do instead?
+      description: Include exact result text or error messages where useful.
+    validations:
+      required: true
+
+  - type: textarea
+    id: diagnostics
+    attributes:
+      label: Diagnostics or supporting evidence
+      description: Optional. Paste relevant diagnostic JSON, logs or screenshots after removing private information. Do not upload a private image unless you deliberately choose to share it.
+      render: text
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Anything else?
+      description: Add any other context that may help reproduce or understand the issue.
+
+  - type: checkboxes
+    id: checks
+    attributes:
+      label: Before submitting
+      options:
+        - label: I searched existing issues for the same problem.
+          required: true
+        - label: I removed personal or sensitive information from anything I am posting publicly.
+          required: true
