@@ -10,7 +10,12 @@
 <p align="center"><strong>Inspect. Clean. Verify.</strong></p>
 
 <p align="center">
-  A private, local Windows utility for inspecting, removing and verifying metadata in image files.<br>
+  A free, local Windows utility for seeing what information is attached to an image,<br>
+  removing supported metadata from a separate cleaned copy, and verifying the result.<br>
+  <strong>Your original stays untouched.</strong>
+</p>
+
+<p align="center">
   <strong>No uploads. No account. No application telemetry.</strong>
 </p>
 
@@ -24,13 +29,31 @@
 
 ---
 
-## See what's hiding in your images. Remove it. Verify the result.
+## Your photo can say more than you think.
 
-Images can carry much more than visible pixels. MetaTaken uses ExifTool and additional format-aware checks to surface metadata in understandable categories, clean what can be safely removed, and automatically inspect the result again.
+Images can carry information you never see in the picture itself — where they were taken, when they were taken, what device was used, who created or edited them, and which software or AI tools were involved.
 
-The default workflow is simple:
+MetaTaken puts that information into understandable categories, lets you choose how much to remove, creates a **separate cleaned copy**, and then automatically inspects that copy again.
 
-**Drop image → Inspect → Clean → Verify**
+**Your original is never cleaned in place or silently overwritten.**
+
+## Why would I use MetaTaken?
+
+You do not need to know what EXIF, XMP or C2PA means to have a reason to care about image metadata.
+
+- **Selling something online** — photos taken at home can carry location, date and device details that you may not want attached to a public listing.
+- **Posting on social media** — check for location, timestamps, device information, creator details and editing history before you hit Post.
+- **Sharing personal photos** — share the picture without unnecessarily sharing where it was taken, what device you used, account details or editing history.
+- **Sharing AI-created or AI-edited images** — Full Metadata Clean can remove supported Content Credentials, C2PA/JUMBF provenance and generator metadata. Where a platform applies an “AI content” label from those embedded signals, removing them can prevent that metadata-based label from following the cleaned file. Platforms may also use independent detection methods.
+
+## Drop → Inspect → Clean → Verify
+
+The main workflow is deliberately small:
+
+1. **Drop** — add individual images, folders, subfolders or batches.
+2. **Inspect** — see what MetaTaken can identify in plain language, with raw technical detail available when you want it.
+3. **Clean a copy** — choose Privacy Clean or Full Metadata Clean. MetaTaken creates a new output file and leaves the source untouched.
+4. **Verify** — the cleaned copy is inspected again, with decoded-pixel comparison where supported.
 
 <p align="center">
   <picture>
@@ -40,33 +63,25 @@ The default workflow is simple:
   </picture>
 </p>
 
-## What MetaTaken looks for
+## Choose how far to go
 
-MetaTaken can inspect and, where safely supported, remove metadata such as:
+### Inspect Only
 
-- EXIF and camera/device information
-- GPS and location data
-- XMP and IPTC metadata
-- author, account and software/generator information
-- comments and descriptions
-- timestamps
-- embedded thumbnails and previews
-- C2PA / Content Credentials / JUMBF provenance data
-- other removable metadata identified by ExifTool and MetaTaken's format-aware checks
-
-Raw technical metadata is also available through the Advanced view.
-
-## Cleaning modes
+See what MetaTaken can identify without modifying the file.
 
 ### Privacy Clean
 
-Targets personal and private metadata such as location, author/device information and timestamps while preserving data required for safe image handling where appropriate.
+Remove personal and private metadata from a separate cleaned copy, including supported location/GPS data, author/account details, device information and timestamps.
 
 ### Full Metadata Clean
 
-Removes all safely removable metadata MetaTaken can identify, including supported AI provenance metadata such as C2PA / Content Credentials.
+Remove all safely removable metadata MetaTaken supports, including supported C2PA / Content Credentials / JUMBF provenance, generator information and other embedded metadata.
 
-MetaTaken creates a cleaned copy by default rather than silently overwriting the original.
+### What about the date the photo was taken?
+
+Privacy Clean targets timestamps, and Full Metadata Clean removes supported metadata more broadly. That can include the original capture date where it is stored as removable metadata.
+
+The important distinction is that **the cleaned copy may lose that metadata, but your untouched original keeps it**.
 
 ## Verification is part of the operation
 
@@ -83,17 +98,36 @@ After cleaning, the output is inspected again and MetaTaken reports what was:
 
 Where practical, MetaTaken also compares decoded image content before and after cleaning. It reports **Pixel content unchanged** only when that check actually passes.
 
+If something remains, is uncertain, is structurally protected or cannot be safely verified, MetaTaken can return **Review** rather than pretending the file is completely clean.
+
+## What MetaTaken looks for
+
+Under the plain-language categories, MetaTaken can inspect and, where safely supported, remove metadata such as:
+
+- EXIF and camera/device information
+- GPS and location data
+- XMP and IPTC metadata
+- author and account information
+- comments and descriptions
+- timestamps
+- software and generator information
+- embedded thumbnails and previews
+- C2PA / Content Credentials / JUMBF provenance data
+- other removable metadata identified by ExifTool and MetaTaken's format-aware checks
+
+Raw technical metadata is available through the Advanced view.
+
 ## Supported image formats
 
 Current inspection and cleaning support:
 
 - JPEG / JPG
-- PNG
-- WebP
+- PNG / APNG
+- WebP / Animated WebP
 - GIF
 - HEIC / HEIF / HIF*
 
-\* HEIC/HEIF/HIF pixel verification depends on compatible Windows HEIF/HEVC codec support.
+\* HEIC/HEIF/HIF decoded-pixel verification depends on compatible Windows WIC/codec support for the specific file.
 
 Additional formats may be added only where they can be supported and verified reliably.
 
@@ -103,11 +137,16 @@ MetaTaken is deliberately local-first:
 
 - image processing stays on your computer
 - no account is required
-- no cloud upload is required
+- no cloud image-processing path
 - no application telemetry
+- local preferences only
 - ExifTool is bundled locally
 
-## SynthID
+## Metadata is not the same as a watermark
+
+MetaTaken cleans supported metadata and provenance structures. It does not claim to remove pixel-level watermarks.
+
+### SynthID
 
 SynthID is pixel-level watermarking rather than conventional metadata.
 
@@ -147,7 +186,8 @@ ExifTool is MetaTaken's primary metadata engine. Third-party components and requ
 
 MetaTaken™ is developed and published by **Tezshouse TeXne**.
 
-**Website:** https://metataken.com/  
+**MetaTaken:** https://metataken.com/  
+**Tezshouse TeXne:** https://tezshousetexne.com/  
 **GitHub:** https://github.com/Tezshouse-TeXne/MetaTaken
 
 Copyright © 2026 Tezshouse TeXne. All rights reserved.
