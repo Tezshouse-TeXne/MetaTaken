@@ -1,0 +1,190 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7faf9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#071827">
+  <meta name="description" content="Inspect and remove supported EXIF, GPS location, device, timestamp and creator metadata from photos locally on Windows. Clean a copy and verify it.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="author" content="Tezshouse TeXne">
+  <title>Remove EXIF & GPS Metadata from Photos on Windows | MetaTaken</title>
+  <link rel="canonical" href="https://metataken.com/remove-exif-gps-metadata/">
+  <link rel="icon" type="image/png" href="../assets/metataken-icon.png">
+  <link rel="apple-touch-icon" href="../assets/metataken-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MetaTaken">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://metataken.com/remove-exif-gps-metadata/">
+  <meta property="og:title" content="Remove EXIF & GPS Metadata from Photos on Windows | MetaTaken">
+  <meta property="og:description" content="Inspect and remove supported EXIF, GPS location, device, timestamp and creator metadata from photos locally on Windows. Clean a copy and verify it.">
+  <meta property="og:image" content="https://metataken.com/assets/metataken-app-light.png">
+  <meta property="og:image:alt" content="MetaTaken for Windows showing image metadata inspection, cleaning and verification.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Remove EXIF & GPS Metadata from Photos on Windows | MetaTaken">
+  <meta name="twitter:description" content="Inspect and remove supported EXIF, GPS location, device, timestamp and creator metadata from photos locally on Windows. Clean a copy and verify it.">
+  <meta name="twitter:image" content="https://metataken.com/assets/metataken-app-light.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://metataken.com/remove-exif-gps-metadata/#article",
+        "headline": "Remove EXIF and GPS metadata from photos — without uploading them.",
+        "description": "Inspect and remove supported EXIF, GPS location, device, timestamp and creator metadata from photos locally on Windows. Clean a copy and verify it.",
+        "dateModified": "2026-08-29",
+        "mainEntityOfPage": "https://metataken.com/remove-exif-gps-metadata/",
+        "author": {
+          "@type": "Organization",
+          "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://metataken.com/remove-exif-gps-metadata/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"MetaTaken","item":"https://metataken.com/"},
+          {"@type":"ListItem","position":2,"name":"Remove EXIF and GPS metadata from photos — without uploading them.","item":"https://metataken.com/remove-exif-gps-metadata/"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="MetaTaken home">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../assets/metataken-wordmark-dark.png">
+          <img src="../assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280">
+        </picture>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/#why">Why MetaTaken?</a>
+        <a href="/#how-it-works">How it works</a>
+        <a class="github-link" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+        <a class="nav-cta" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="shell guide-shell">
+        <nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="/">MetaTaken</a><span>›</span><span>EXIF & GPS privacy</span></nav>
+        <p class="eyebrow">EXIF & GPS privacy</p>
+        <h1>Remove EXIF and GPS metadata from photos — without uploading them.</h1>
+        <p class="guide-lede">A photo can reveal more than the picture itself: GPS coordinates, capture dates, device details, creator information, editing software and other metadata. MetaTaken lets you inspect that information first, remove supported private metadata from a copy, and verify the result locally on Windows.</p>
+        <div class="guide-actions">
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken for Windows</a>
+          <a class="button button-secondary" href="/#how-it-works">See how MetaTaken works <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="trust-row" aria-label="MetaTaken privacy and workflow highlights">
+          <span>Local Windows processing</span>
+          <span>No image uploads</span>
+          <span>No account</span>
+          <span>Automatic verification</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="guide-article">
+      <div class="shell guide-shell">
+        
+        <section class="guide-section">
+          <h2>What can be hidden inside an ordinary photo?</h2>
+          <p>EXIF is commonly associated with camera settings, but image metadata can span several families. Depending on the file, you may find GPS coordinates, capture timestamps, camera or phone model, software, author or account fields, comments, descriptions, thumbnails, XMP, IPTC and other data.</p>
+          <p>The privacy question is not “does this photo have EXIF?” It is “what information is actually attached to this file, and do I want to share it?”</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Privacy Clean is designed for that question.</h2>
+          <p>MetaTaken's Privacy Clean targets supported personal and private metadata such as:</p>
+          <ul class="guide-list">
+            <li>GPS and location information</li>
+            <li>author, account and creator details</li>
+            <li>device and camera-identifying information</li>
+            <li>dates and timestamps, including capture date where stored as removable metadata</li>
+          </ul>
+          <p>If you want to go further, Full Metadata Clean removes all safely removable metadata MetaTaken supports, including broader XMP / IPTC data and supported AI provenance.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Your original keeps its original metadata.</h2>
+          <p>MetaTaken never cleans the source image in place. It creates a separate output copy. That matters when you want a privacy-safe delivery copy but still want your archive to retain capture dates, camera information or other useful original metadata.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>How to remove GPS and EXIF metadata with MetaTaken</h2>
+          <ol class="guide-steps">
+            <li><strong>Drop the image or a batch.</strong> MetaTaken inspects the files locally.</li>
+            <li><strong>Review the plain-language findings.</strong> Look for location, device, dates, creator and other categories.</li>
+            <li><strong>Choose Privacy Clean.</strong> A separate cleaned copy is created with the selected private metadata targeted for removal.</li>
+            <li><strong>Check the verified result.</strong> MetaTaken re-inspects the output and reports anything retained, unsupported or uncertain.</li>
+          </ol>
+        </section>
+
+        <section class="guide-section">
+          <h2>Why not just use “remove all metadata” blindly?</h2>
+          <p>Sometimes that is exactly what you want. Other times you may want a narrower privacy clean, or you may be working with a structurally unusual image where aggressive rewriting is not justified. MetaTaken keeps those states visible instead of treating every file as identical.</p>
+        </section>
+        
+    <section class="guide-section guide-related-section">
+      <h2>Related MetaTaken guides</h2>
+      <div class="guide-related">
+        <a href="/offline-image-metadata-remover/"><strong>Local metadata remover for Windows</strong><span>Keep the image-processing workflow on your own PC.</span></a>
+        <a href="/remove-ai-metadata/"><strong>Remove AI metadata</strong><span>Go beyond ordinary EXIF and inspect AI provenance and generator information.</span></a>
+        <a href="/remove-c2pa-content-credentials/"><strong>Remove C2PA / Content Credentials</strong><span>A focused guide to embedded provenance structures.</span></a>
+      </div>
+    </section>
+        <section class="guide-download">
+          <p class="eyebrow">Inspect. Clean. Verify.</p>
+          <h2>See what the file is actually carrying.</h2>
+          <p>MetaTaken is a free local Windows utility. It inspects supported image metadata, creates a separate cleaned copy, then inspects the result again instead of assuming the job worked.</p>
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken v0.3.0-rc2</a>
+          <small><a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">Release notes and checksum on GitHub</a></small>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <div class="footer-brand">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../assets/metataken-wordmark-dark.png">
+          <img src="../assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280" loading="lazy" decoding="async">
+        </picture>
+        <p>We have a particular set of tools. We find it. We remove it.</p>
+        <p class="footer-parent-brand">MetaTaken™ by <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/remove-ai-metadata/">AI metadata</a>
+        <a href="/remove-c2pa-content-credentials/">C2PA</a>
+        <a href="/offline-image-metadata-remover/">Local / offline</a>
+        <a href="/remove-exif-gps-metadata/">EXIF &amp; GPS</a>
+        <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+      </div>
+    </div>
+    <div class="shell footer-legal">
+      <p>Copyright © 2026 <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>. All rights reserved.</p>
+      <p>Windows is a trademark of the Microsoft group of companies.</p>
+    </div>
+  </footer>
+</body>
+</html>

@@ -1,0 +1,192 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7faf9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#071827">
+  <meta name="description" content="Inspect and remove supported AI metadata, generator information and C2PA Content Credentials locally on Windows. No image uploads. Verify the cleaned copy.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="author" content="Tezshouse TeXne">
+  <title>Remove AI Metadata from Images Locally on Windows | MetaTaken</title>
+  <link rel="canonical" href="https://metataken.com/remove-ai-metadata/">
+  <link rel="icon" type="image/png" href="../assets/metataken-icon.png">
+  <link rel="apple-touch-icon" href="../assets/metataken-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MetaTaken">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://metataken.com/remove-ai-metadata/">
+  <meta property="og:title" content="Remove AI Metadata from Images Locally on Windows | MetaTaken">
+  <meta property="og:description" content="Inspect and remove supported AI metadata, generator information and C2PA Content Credentials locally on Windows. No image uploads. Verify the cleaned copy.">
+  <meta property="og:image" content="https://metataken.com/assets/metataken-app-light.png">
+  <meta property="og:image:alt" content="MetaTaken for Windows showing image metadata inspection, cleaning and verification.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Remove AI Metadata from Images Locally on Windows | MetaTaken">
+  <meta name="twitter:description" content="Inspect and remove supported AI metadata, generator information and C2PA Content Credentials locally on Windows. No image uploads. Verify the cleaned copy.">
+  <meta name="twitter:image" content="https://metataken.com/assets/metataken-app-light.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://metataken.com/remove-ai-metadata/#article",
+        "headline": "Remove AI metadata from images — locally, then verify it.",
+        "description": "Inspect and remove supported AI metadata, generator information and C2PA Content Credentials locally on Windows. No image uploads. Verify the cleaned copy.",
+        "dateModified": "2026-08-29",
+        "mainEntityOfPage": "https://metataken.com/remove-ai-metadata/",
+        "author": {
+          "@type": "Organization",
+          "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://metataken.com/remove-ai-metadata/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"MetaTaken","item":"https://metataken.com/"},
+          {"@type":"ListItem","position":2,"name":"Remove AI metadata from images — locally, then verify it.","item":"https://metataken.com/remove-ai-metadata/"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="MetaTaken home">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../assets/metataken-wordmark-dark.png">
+          <img src="../assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280">
+        </picture>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/#why">Why MetaTaken?</a>
+        <a href="/#how-it-works">How it works</a>
+        <a class="github-link" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+        <a class="nav-cta" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="shell guide-shell">
+        <nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="/">MetaTaken</a><span>›</span><span>Remove AI metadata</span></nav>
+        <p class="eyebrow">Remove AI metadata</p>
+        <h1>Remove AI metadata from images — locally, then verify it.</h1>
+        <p class="guide-lede">AI-created and AI-edited images can carry machine-readable provenance, generator details and ordinary metadata that travels with the file. MetaTaken shows you what is there, removes supported metadata from a separate copy, and checks the result on your Windows PC.</p>
+        <div class="guide-actions">
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken for Windows</a>
+          <a class="button button-secondary" href="/#how-it-works">See how MetaTaken works <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="trust-row" aria-label="MetaTaken privacy and workflow highlights">
+          <span>Local Windows processing</span>
+          <span>No image uploads</span>
+          <span>No account</span>
+          <span>Automatic verification</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="guide-article">
+      <div class="shell guide-shell">
+        
+        <section class="guide-section">
+          <h2>“AI metadata” is not one single tag.</h2>
+          <p>If an image was created or edited with ChatGPT, DALL·E, Gemini, Midjourney, Adobe Firefly, Stable Diffusion or another AI tool, the useful question is not just which brand made it. The useful question is <strong>what the exported file actually contains</strong>.</p>
+          <p>Depending on the file and workflow, that can include C2PA / Content Credentials, JUMBF provenance structures, XMP or IPTC fields, software and generator information, comments, descriptions, timestamps and other metadata. Not every tool writes the same data, and not every exported image carries all of it.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>What MetaTaken can inspect and clean</h2>
+          <div class="guide-grid">
+            <div><strong>C2PA / Content Credentials</strong><span>Supported embedded provenance structures are inspected and can be targeted by Full Metadata Clean.</span></div>
+            <div><strong>Generator &amp; software information</strong><span>See tool, software and creator-related fields that are actually present in the image.</span></div>
+            <div><strong>XMP, IPTC &amp; EXIF</strong><span>Inspect ordinary metadata families that can also contain editing, source, creator or privacy information.</span></div>
+            <div><strong>Other removable metadata</strong><span>MetaTaken uses ExifTool plus format-aware checks and reports what was removed, retained, unsupported or uncertain.</span></div>
+          </div>
+        </section>
+
+        <section class="guide-section">
+          <h2>The workflow is deliberately boring: inspect, clean, verify.</h2>
+          <ol class="guide-steps">
+            <li><strong>Drop the final image you plan to share.</strong> MetaTaken inspects the file before changing anything.</li>
+            <li><strong>Review the findings.</strong> Plain-language categories are shown first; raw metadata is available in Advanced view.</li>
+            <li><strong>Choose Full Metadata Clean.</strong> A separate cleaned copy is created. Your original is not overwritten.</li>
+            <li><strong>Let MetaTaken verify the output.</strong> The cleaned copy is inspected again, and decoded pixel content is compared where supported.</li>
+          </ol>
+          <div class="guide-note"><strong>Why the verification matters:</strong> a metadata tool should not call a file clean merely because a command returned successfully. MetaTaken reports the post-clean state it can actually verify.</div>
+        </section>
+
+        <section class="guide-section">
+          <h2>Will this remove an “AI content” label?</h2>
+          <p>It can remove supported <strong>metadata-based signals</strong> that may be used to apply a label, including embedded C2PA / Content Credentials and generator-related metadata. If a platform's label comes from those file-level signals, removing them can stop that metadata from travelling with the cleaned copy.</p>
+          <p>That is not the same as making an image universally “undetectable”. A platform may use its own classifier, account context, upload history or other signals that are outside the image metadata MetaTaken can inspect.</p>
+          <p><a href="/remove-ai-detection-from-image/">Read the full explanation: what “remove AI detection” can and cannot mean →</a></p>
+        </section>
+
+        <section class="guide-section">
+          <h2>What about SynthID?</h2>
+          <p>SynthID is a pixel-level watermarking system, not conventional metadata. MetaTaken does not attempt to remove it and does not treat “metadata cleaned” as evidence that SynthID is absent.</p>
+          <div class="guide-status"><span>SynthID</span><strong>Not tested / detection unavailable</strong><small>This is not evidence that SynthID is absent.</small></div>
+        </section>
+        
+    <section class="guide-section guide-related-section">
+      <h2>Related MetaTaken guides</h2>
+      <div class="guide-related">
+        <a href="/remove-ai-detection-from-image/"><strong>Can you remove AI detection from an image?</strong><span>Separate removable metadata from pixel watermarks and platform classifiers.</span></a>
+        <a href="/remove-c2pa-content-credentials/"><strong>Remove C2PA / Content Credentials</strong><span>A focused guide to embedded provenance and post-clean verification.</span></a>
+        <a href="/offline-image-metadata-remover/"><strong>Local image metadata cleaning</strong><span>Why MetaTaken uses a Windows desktop workflow instead of a cloud processing service.</span></a>
+      </div>
+    </section>
+        <section class="guide-download">
+          <p class="eyebrow">Inspect. Clean. Verify.</p>
+          <h2>See what the file is actually carrying.</h2>
+          <p>MetaTaken is a free local Windows utility. It inspects supported image metadata, creates a separate cleaned copy, then inspects the result again instead of assuming the job worked.</p>
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken v0.3.0-rc2</a>
+          <small><a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">Release notes and checksum on GitHub</a></small>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <div class="footer-brand">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../assets/metataken-wordmark-dark.png">
+          <img src="../assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280" loading="lazy" decoding="async">
+        </picture>
+        <p>We have a particular set of tools. We find it. We remove it.</p>
+        <p class="footer-parent-brand">MetaTaken™ by <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/remove-ai-metadata/">AI metadata</a>
+        <a href="/remove-c2pa-content-credentials/">C2PA</a>
+        <a href="/offline-image-metadata-remover/">Local / offline</a>
+        <a href="/remove-exif-gps-metadata/">EXIF &amp; GPS</a>
+        <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+      </div>
+    </div>
+    <div class="shell footer-legal">
+      <p>Copyright © 2026 <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>. All rights reserved.</p>
+      <p>Windows is a trademark of the Microsoft group of companies.</p>
+    </div>
+  </footer>
+</body>
+</html>

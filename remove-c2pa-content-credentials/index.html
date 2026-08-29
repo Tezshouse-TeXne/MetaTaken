@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en-AU">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="color-scheme" content="light dark">
+  <meta name="theme-color" media="(prefers-color-scheme: light)" content="#f7faf9">
+  <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#071827">
+  <meta name="description" content="Inspect and remove supported embedded C2PA Content Credentials and JUMBF provenance from images locally on Windows, then verify the cleaned copy.">
+  <meta name="robots" content="index,follow,max-image-preview:large,max-snippet:-1">
+  <meta name="author" content="Tezshouse TeXne">
+  <title>Remove C2PA Content Credentials from Images | MetaTaken</title>
+  <link rel="canonical" href="https://metataken.com/remove-c2pa-content-credentials/">
+  <link rel="icon" type="image/png" href="../assets/metataken-icon.png">
+  <link rel="apple-touch-icon" href="../assets/metataken-icon.png">
+
+  <meta property="og:type" content="article">
+  <meta property="og:site_name" content="MetaTaken">
+  <meta property="og:locale" content="en_AU">
+  <meta property="og:url" content="https://metataken.com/remove-c2pa-content-credentials/">
+  <meta property="og:title" content="Remove C2PA Content Credentials from Images | MetaTaken">
+  <meta property="og:description" content="Inspect and remove supported embedded C2PA Content Credentials and JUMBF provenance from images locally on Windows, then verify the cleaned copy.">
+  <meta property="og:image" content="https://metataken.com/assets/metataken-app-light.png">
+  <meta property="og:image:alt" content="MetaTaken for Windows showing image metadata inspection, cleaning and verification.">
+
+  <meta name="twitter:card" content="summary_large_image">
+  <meta name="twitter:title" content="Remove C2PA Content Credentials from Images | MetaTaken">
+  <meta name="twitter:description" content="Inspect and remove supported embedded C2PA Content Credentials and JUMBF provenance from images locally on Windows, then verify the cleaned copy.">
+  <meta name="twitter:image" content="https://metataken.com/assets/metataken-app-light.png">
+
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@graph": [
+      {
+        "@type": "Article",
+        "@id": "https://metataken.com/remove-c2pa-content-credentials/#article",
+        "headline": "Remove supported C2PA Content Credentials — and verify what remains.",
+        "description": "Inspect and remove supported embedded C2PA Content Credentials and JUMBF provenance from images locally on Windows, then verify the cleaned copy.",
+        "dateModified": "2026-08-29",
+        "mainEntityOfPage": "https://metataken.com/remove-c2pa-content-credentials/",
+        "author": {
+          "@type": "Organization",
+          "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/"
+        },
+        "publisher": {
+          "@type": "Organization",
+          "name": "Tezshouse TeXne",
+          "url": "https://tezshousetexne.com/"
+        }
+      },
+      {
+        "@type": "BreadcrumbList",
+        "@id": "https://metataken.com/remove-c2pa-content-credentials/#breadcrumb",
+        "itemListElement": [
+          {"@type":"ListItem","position":1,"name":"MetaTaken","item":"https://metataken.com/"},
+          {"@type":"ListItem","position":2,"name":"Remove supported C2PA Content Credentials — and verify what remains.","item":"https://metataken.com/remove-c2pa-content-credentials/"}
+        ]
+      }
+    ]
+  }
+  </script>
+  <link rel="stylesheet" href="../styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#main">Skip to content</a>
+
+  <header class="site-header">
+    <div class="shell header-inner">
+      <a class="brand" href="/" aria-label="MetaTaken home">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../assets/metataken-wordmark-dark.png">
+          <img src="../assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280">
+        </picture>
+      </a>
+      <nav class="nav" aria-label="Main navigation">
+        <a href="/#why">Why MetaTaken?</a>
+        <a href="/#how-it-works">How it works</a>
+        <a class="github-link" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+        <a class="nav-cta" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download</a>
+      </nav>
+    </div>
+  </header>
+
+  <main id="main">
+    <section class="guide-hero">
+      <div class="shell guide-shell">
+        <nav class="guide-breadcrumb" aria-label="Breadcrumb"><a href="/">MetaTaken</a><span>›</span><span>C2PA / Content Credentials</span></nav>
+        <p class="eyebrow">C2PA / Content Credentials</p>
+        <h1>Remove supported C2PA Content Credentials — and verify what remains.</h1>
+        <p class="guide-lede">Content Credentials are provenance data associated with the C2PA standard. MetaTaken can inspect supported embedded C2PA / JUMBF structures, remove them with Full Metadata Clean where it is safe to do so, and re-inspect the output.</p>
+        <div class="guide-actions">
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken for Windows</a>
+          <a class="button button-secondary" href="/#how-it-works">See how MetaTaken works <span aria-hidden="true">→</span></a>
+        </div>
+        <div class="trust-row" aria-label="MetaTaken privacy and workflow highlights">
+          <span>Local Windows processing</span>
+          <span>No image uploads</span>
+          <span>No account</span>
+          <span>Automatic verification</span>
+        </div>
+      </div>
+    </section>
+
+    <article class="guide-article">
+      <div class="shell guide-shell">
+        
+        <section class="guide-section">
+          <h2>What are C2PA Content Credentials?</h2>
+          <p>C2PA is a provenance standard for attaching verifiable information about a digital asset's origin and history. In the C2PA specification, a Content Credential is the non-technical term for a C2PA Manifest; manifest stores use JUMBF-compatible structures and can carry signed claims and assertions about an asset.</p>
+          <p>For an ordinary user, the practical point is simpler: an image can carry machine-readable provenance that says something about how it was created or edited.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>MetaTaken treats C2PA as data to inspect, not a magic “AI yes/no” flag.</h2>
+          <p>Content Credentials may contain useful provenance and are not inherently “bad metadata”. But there are legitimate reasons to remove embedded provenance from a delivery copy — privacy, workflow separation, client requirements, or simply wanting to choose what metadata leaves your computer.</p>
+          <p>MetaTaken therefore shows the finding first. Full Metadata Clean can target supported embedded C2PA / Content Credentials / JUMBF structures along with other safely removable metadata. The original image is not overwritten.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>How to remove C2PA / Content Credentials with MetaTaken</h2>
+          <ol class="guide-steps">
+            <li><strong>Inspect the image.</strong> MetaTaken identifies supported provenance structures and other metadata before cleaning.</li>
+            <li><strong>Choose Full Metadata Clean.</strong> This is the mode that targets supported C2PA / Content Credentials / JUMBF provenance.</li>
+            <li><strong>Keep the original.</strong> MetaTaken writes a separate cleaned copy rather than cleaning the source in place.</li>
+            <li><strong>Verify the output.</strong> The cleaned file is inspected again and the result is reported as Clean, Review, Failed or another evidence-based state.</li>
+          </ol>
+        </section>
+
+        <section class="guide-section">
+          <h2>Removing Content Credentials is not the same as removing every AI signal.</h2>
+          <p>C2PA is a file-level provenance mechanism. Pixel-level watermarking is a different mechanism, and a platform can also run independent classifiers. MetaTaken does not claim that removing C2PA makes an image universally “not AI”.</p>
+          <p>Likewise, because C2PA can support external provenance models as well as embedded data, MetaTaken reports what it actually detects in the file and what it can safely remove rather than making a blanket claim about every possible provenance source.</p>
+        </section>
+
+        <section class="guide-section">
+          <h2>Why verification is part of the feature</h2>
+          <p>A cleaner should not infer success from “the command completed”. MetaTaken re-inspects the cleaned copy. Where supported, it also compares decoded pixel content before and after and only reports <strong>Pixel content unchanged</strong> when that check actually passes.</p>
+          <div class="guide-note"><strong>MetaTaken's rule:</strong> detected, removed, retained, unsupported, uncertain and not tested are different states. The report should say which one applies.</div>
+        </section>
+        
+    <section class="guide-section guide-related-section">
+      <h2>Related MetaTaken guides</h2>
+      <div class="guide-related">
+        <a href="/remove-ai-metadata/"><strong>Remove AI metadata</strong><span>Clean supported generator and provenance metadata from a separate copy.</span></a>
+        <a href="/remove-ai-detection-from-image/"><strong>AI detection vs metadata</strong><span>Why C2PA removal is only one layer of a wider detection question.</span></a>
+        <a href="/offline-image-metadata-remover/"><strong>Process locally on Windows</strong><span>No MetaTaken cloud image-processing service receives your image.</span></a>
+      </div>
+    </section>
+        <section class="guide-download">
+          <p class="eyebrow">Inspect. Clean. Verify.</p>
+          <h2>See what the file is actually carrying.</h2>
+          <p>MetaTaken is a free local Windows utility. It inspects supported image metadata, creates a separate cleaned copy, then inspects the result again instead of assuming the job worked.</p>
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken v0.3.0-rc2</a>
+          <small><a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">Release notes and checksum on GitHub</a></small>
+        </section>
+      </div>
+    </article>
+  </main>
+
+  <footer class="site-footer">
+    <div class="shell footer-main">
+      <div class="footer-brand">
+        <picture>
+          <source media="(prefers-color-scheme: dark)" srcset="../assets/metataken-wordmark-dark.png">
+          <img src="../assets/metataken-wordmark-light.png" alt="MetaTaken" width="1000" height="280" loading="lazy" decoding="async">
+        </picture>
+        <p>We have a particular set of tools. We find it. We remove it.</p>
+        <p class="footer-parent-brand">MetaTaken™ by <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>.</p>
+      </div>
+      <div class="footer-links">
+        <a href="/remove-ai-metadata/">AI metadata</a>
+        <a href="/remove-c2pa-content-credentials/">C2PA</a>
+        <a href="/offline-image-metadata-remover/">Local / offline</a>
+        <a href="/remove-exif-gps-metadata/">EXIF &amp; GPS</a>
+        <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+      </div>
+    </div>
+    <div class="shell footer-legal">
+      <p>Copyright © 2026 <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>. All rights reserved.</p>
+      <p>Windows is a trademark of the Microsoft group of companies.</p>
+    </div>
+  </footer>
+</body>
+</html>
