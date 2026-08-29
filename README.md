@@ -41,10 +41,10 @@ MetaTaken puts that information into understandable categories, lets you choose 
 
 You do not need to know what EXIF, XMP or C2PA means to have a reason to care about image metadata.
 
-- **Selling something online** — photos taken at home can carry location, date and device details that you may not want attached to a public listing.
+- **Sharing AI-created or AI-edited images** — Full Metadata Clean can remove supported Content Credentials, C2PA/JUMBF provenance and generator metadata. Where a platform applies an “AI content” label from those embedded signals, removing them can prevent that metadata-based label from following the cleaned file. Platforms may also use independent detection methods.
 - **Posting on social media** — check for location, timestamps, device information, creator details and editing history before you hit Post.
 - **Sharing personal photos** — share the picture without unnecessarily sharing where it was taken, what device you used, account details or editing history.
-- **Sharing AI-created or AI-edited images** — Full Metadata Clean can remove supported Content Credentials, C2PA/JUMBF provenance and generator metadata. Where a platform applies an “AI content” label from those embedded signals, removing them can prevent that metadata-based label from following the cleaned file. Platforms may also use independent detection methods.
+- **Selling something online** — photos taken at home can carry location, date and device details that you may not want attached to a public listing.
 
 ## Drop → Inspect → Clean → Verify
 
@@ -176,7 +176,7 @@ The release page is the public authority for current release notes, checksum inf
 
 This repository is MetaTaken's public GitHub home. It currently hosts the public website source and official release downloads.
 
-The website is intentionally lightweight: static HTML/CSS, no analytics, no cookies, no external fonts and no third-party JavaScript. Open `index.html` directly to preview it locally.
+The website is intentionally lightweight: static HTML/CSS, no analytics, no cookies, no external fonts and no third-party JavaScript. The homepage is supported by focused, people-first guides for AI metadata, C2PA / Content Credentials, local/offline cleaning and EXIF/GPS privacy. Open `index.html` directly to preview the homepage locally.
 
 ## Built on trusted tooling
 
