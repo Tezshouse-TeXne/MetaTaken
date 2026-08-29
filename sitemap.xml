@@ -2,6 +2,26 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://metataken.com/</loc>
-    <lastmod>2026-08-24</lastmod>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://metataken.com/remove-ai-metadata/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://metataken.com/remove-ai-detection-from-image/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://metataken.com/remove-c2pa-content-credentials/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://metataken.com/offline-image-metadata-remover/</loc>
+    <lastmod>2026-08-29</lastmod>
+  </url>
+  <url>
+    <loc>https://metataken.com/remove-exif-gps-metadata/</loc>
+    <lastmod>2026-08-29</lastmod>
   </url>
 </urlset>
