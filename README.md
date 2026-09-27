@@ -57,9 +57,9 @@ The main workflow is deliberately small:
 
 <p align="center">
   <picture>
-    <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-app-dark.png">
-    <source media="(prefers-color-scheme: light)" srcset="assets/metataken-app-light.png">
-    <img alt="MetaTaken application" src="assets/metataken-app-light.png" width="900">
+    <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-app-dark.webp">
+    <source media="(prefers-color-scheme: light)" srcset="assets/metataken-app-light.webp">
+    <img alt="MetaTaken application" src="assets/metataken-app-light.webp" width="900">
   </picture>
 </p>
 
