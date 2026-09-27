@@ -56,8 +56,8 @@
         "name": "MetaTaken",
         "url": "https://metataken.com/",
         "sameAs": "https://github.com/Tezshouse-TeXne/MetaTaken",
-        "downloadUrl": "https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip",
-        "softwareVersion": "0.3.0-rc2",
+        "downloadUrl": "https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.4.0-rc2/MetaTaken-v0.4.0-rc2-portable.zip",
+        "softwareVersion": "0.4.0-rc2",
         "operatingSystem": "Windows x64",
         "applicationCategory": "UtilitiesApplication",
         "description": "A local Windows utility that inspects EXIF, GPS, AI-related metadata and C2PA Content Credentials, removes supported metadata from a separate cleaned copy and verifies the result without intentionally altering image pixels.",
@@ -145,8 +145,8 @@
       <nav class="nav" aria-label="Main navigation">
         <a href="#why">Why MetaTaken?</a>
         <a href="#how-it-works">How it works</a>
-        <a class="github-link" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
-        <a class="nav-cta" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download</a>
+        <a class="github-link" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.4.0-rc2">GitHub</a>
+        <a class="nav-cta" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.4.0-rc2/MetaTaken-v0.4.0-rc2-portable.zip">Download</a>
       </nav>
     </div>
   </header>
@@ -167,7 +167,7 @@
           <p class="hero-intro">Images can carry information you never see — EXIF, GPS, dates, device details, creator information, editing software and AI provenance such as C2PA / Content Credentials. MetaTaken inspects what is attached, removes supported metadata from a separate copy, and verifies the result <strong>locally on Windows with no image upload.</strong> Your original stays untouched.</p>
 
           <div class="hero-actions">
-            <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download for Windows</a>
+            <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.4.0-rc2/MetaTaken-v0.4.0-rc2-portable.zip">Download for Windows</a>
             <a class="button button-secondary" href="#why">Why use MetaTaken? <span aria-hidden="true">→</span></a>
           </div>
 
@@ -184,7 +184,7 @@
             <source media="(prefers-color-scheme: dark)" srcset="assets/metataken-app-dark.png">
             <img src="assets/metataken-app-light.png" alt="MetaTaken application showing image inspection results and Full Metadata Clean controls." width="1140" height="810" fetchpriority="high" decoding="async">
           </picture>
-          <figcaption>Actual MetaTaken v0.3.0-rc2 application interface.</figcaption>
+          <figcaption>MetaTaken application interface.</figcaption>
         </figure>
       </div>
     </section>
@@ -350,12 +350,12 @@
           <p class="eyebrow">Conservative by design</p>
           <h2>MetaTaken doesn't pretend.</h2>
           <p class="lead">Some image structures are unusual, proprietary or too risky to rewrite blindly. When the evidence isn't strong enough, MetaTaken says so.</p>
-          <p class="lead">That means a file can be marked <strong>Review</strong> instead of being called clean when something remains, is uncertain, or cannot be safely verified.</p>
+          <p class="lead">That means a file can be marked <strong>Cleaned with Notes</strong> instead of being called clean when something remains, is uncertain, or cannot be safely verified.</p>
         </div>
         <div class="status-board">
           <div class="status-line status-clean"><span>✓</span><div><strong>Clean</strong><small>Requested cleaning and verification passed.</small></div></div>
           <div class="status-line status-none"><span>—</span><div><strong>No changes needed</strong><small>Nothing targeted by the selected mode needed removal.</small></div></div>
-          <div class="status-line status-review-line"><span>!</span><div><strong>Review</strong><small>Something remains, is uncertain or needs attention.</small></div></div>
+          <div class="status-line status-review-line"><span>!</span><div><strong>Cleaned with Notes</strong><small>Cleaning completed, but something remains, is uncertain or needs attention.</small></div></div>
           <div class="status-line status-failed"><span>×</span><div><strong>Failed</strong><small>The requested operation or required verification did not complete.</small></div></div>
         </div>
       </div>
@@ -463,12 +463,12 @@
         <div>
           <p class="eyebrow">Freeware for Windows</p>
           <h2>Ready to see what your images are carrying?</h2>
-          <p>MetaTaken v0.3.0-rc2 is the current accepted release candidate and is available now as a portable Windows x64 download.</p>
+          <p>MetaTaken v0.4.0-rc2 is the first Tauri-based release candidate in the current release line and is available now as a portable Windows x64 download.</p>
         </div>
         <div class="download-actions">
           <span class="release-badge">RC2 pre-release · Windows x64 · Portable</span>
-          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip">Download MetaTaken</a>
-          <small><a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">View release notes and checksum on GitHub.</a></small>
+          <a class="button button-primary" href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.4.0-rc2/MetaTaken-v0.4.0-rc2-portable.zip">Download MetaTaken</a>
+          <small><a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.4.0-rc2">View release notes and checksum on GitHub.</a></small>
         </div>
       </div>
     </section>
@@ -514,11 +514,11 @@
           </details>
           <details>
             <summary>Does “Clean” mean my image is guaranteed anonymous?</summary>
-            <p>No. MetaTaken reports what it can detect, remove and verify. It deliberately uses Review, Failed, Unsupported or uncertain outcomes when stronger claims are not justified.</p>
+            <p>No. MetaTaken reports what it can detect, remove and verify. It deliberately uses Cleaned with Notes, Failed, Unsupported or uncertain outcomes when stronger claims are not justified.</p>
           </details>
           <details>
-            <summary>Why would a file show Review?</summary>
-            <p>Review means something remains, is uncertain, is structurally protected, or could not be safely handled or verified. MetaTaken prefers that over a false Clean result.</p>
+            <summary>Why would a file show Cleaned with Notes?</summary>
+            <p>Cleaned with Notes means cleaning completed, but something remains, is uncertain, is structurally protected, or could not be safely handled or verified. MetaTaken prefers that over a false Clean result.</p>
           </details>
           <details>
             <summary>Is MetaTaken free?</summary>
@@ -543,7 +543,7 @@
         <a href="/remove-ai-metadata/">AI metadata</a>
         <a href="/remove-c2pa-content-credentials/">C2PA</a>
         <a href="/offline-image-metadata-remover/">Local / offline</a>
-        <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2">GitHub</a>
+        <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.4.0-rc2">GitHub</a>
         <a href="mailto:support@metataken.com">Support</a>
         <a href="https://tezshousetexne.com/">Tezshouse TeXne</a>
       </div>

@@ -20,9 +20,9 @@
 </p>
 
 <p align="center">
-  <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2"><strong>View MetaTaken v0.3.0-rc2</strong></a>
+  <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.4.0-rc2"><strong>View MetaTaken v0.4.0-rc2</strong></a>
   ·
-  <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip"><strong>Download Windows portable ZIP</strong></a>
+  <a href="https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.4.0-rc2/MetaTaken-v0.4.0-rc2-portable.zip"><strong>Download Windows portable ZIP</strong></a>
   ·
   <a href="https://metataken.com/"><strong>metataken.com</strong></a>
 </p>
@@ -98,7 +98,7 @@ After cleaning, the output is inspected again and MetaTaken reports what was:
 
 Where practical, MetaTaken also compares decoded image content before and after cleaning. It reports **Pixel content unchanged** only when that check actually passes.
 
-If something remains, is uncertain, is structurally protected or cannot be safely verified, MetaTaken can return **Review** rather than pretending the file is completely clean.
+If something remains, is uncertain, is structurally protected or cannot be safely verified, MetaTaken can return **Cleaned with Notes** rather than pretending the file is completely clean.
 
 ## What MetaTaken looks for
 
@@ -156,19 +156,19 @@ MetaTaken does **not** attempt to remove SynthID. Unless a sufficiently reliable
 
 That status is not evidence that SynthID is absent.
 
-## Current release — v0.3.0-rc2
+## Current release — v0.4.0-rc2
 
-MetaTaken v0.3.0-rc2 is an accepted release candidate for v0.3.0.
+MetaTaken v0.4.0-rc2 is the first Tauri-based release candidate in the current release line.
 
-RC2 has passed retained regression testing, packaged Windows validation, parallel-processing comparison testing and the full 187-image reference corpus.
+The accepted Windows portable candidate passed retained regression testing, exact-package auditing and native corpus acceptance before publication. This is a release candidate, not a final stable release.
 
 The portable build requires no installer: extract the ZIP and run `MetaTaken.exe`.
 
 **Release page:**  
-https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.3.0-rc2
+https://github.com/Tezshouse-TeXne/MetaTaken/releases/tag/v0.4.0-rc2
 
 **Direct download:**  
-https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.3.0-rc2/MetaTaken-v0.3.0-rc2-portable.zip
+https://github.com/Tezshouse-TeXne/MetaTaken/releases/download/v0.4.0-rc2/MetaTaken-v0.4.0-rc2-portable.zip
 
 The release page is the public authority for current release notes, checksum information and known limitations.
 
